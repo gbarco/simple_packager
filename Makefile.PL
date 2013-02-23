@@ -38,7 +38,7 @@ my $z = Archive::Zip::SimpleZip->new( $package{PACKAGE} ) or die "Cannot create 
 
 #add all files
 for ( @{$package{CONTENTS}} ) {
-	if ( defined $package{SKIP} ) {
+	if ( defined $package{SKIP} && $package{SKIP} ne '' ) {
 		if ( /$package{SKIP}/ ) {
 			print "Skipping '$_'\n";
 			next;
