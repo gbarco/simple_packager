@@ -1,0 +1,14 @@
+package=build/glacier.zip
+pre_package=echo "Pre_package"
+post_package=echo "Packaged!"
+#skip regexp
+skip=(\.txt\.log\.txt|\.txt\.html|\.bat)$
+g_up.pl
+g_check.pl
+g_download.pl
+g_request.pl
+g_up.bat
+g_check.bat
+g_download.bat
+g_request.bat
+<test_archive/*>
